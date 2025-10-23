@@ -183,12 +183,14 @@
             resultText.textContent = 'جاري البحث عن بيانات الريموت المطابق...';
 
             // *** استدعاء الـ API الحقيقي ***
+            // هذا هو الجزء الذي يتصل بالذكاء الاصطناعي لجلب البيانات
             await callGeminiAPI(year, type, model, market);
         });
 
-        // *** دالة لاستدعاء Gemini API ***
+        // *** دالة لاستدعاء Gemini API (الاتصال الحقيقي بالذكاء الاصطناعي) ***
         async function callGeminiAPI(year, type, model, market) {
-            const apiKey = ""; // سيتم توفير المفتاح تلقائيًا
+            // ملاحظة: اترك apiKey فارغًا، سيتم توفيره تلقائيًا
+            const apiKey = ""; 
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
             // 2. إعداد نص البحث (الـ Prompt) - بتنسيق لسهولة التحليل
@@ -222,6 +224,7 @@ ALT_2_NOTES: [ملاحظات 2 أو "N/A"]
                     parts: [{ text: "أنت مساعد خبير في قطع غيار السيارات، متخصص في ريموتات المفاتيح. ابحث عن المعلومات المطلوبة بدقة والتزم **تماماً** بالتنسيق المطلوب في نهاية طلب المستخدم. لا تضف أي مقدمات أو خواتيم." }]
                 },
                 // *** تفعيل البحث المباشر (Google Search Grounding) ***
+                // هذا الجزء يتيح للذكاء الاصطناعي البحث في Google للحصول على أحدث المعلومات
                 tools: [{ "google_search": {} }]
             };
 
@@ -346,5 +349,4 @@ ALT_2_NOTES: [ملاحظات 2 أو "N/A"]
 
 </body>
 </html>
-
 
