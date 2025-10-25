@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTER KEY - باحث الريموت</title>
+    
+    <meta name="application-name" content="MASTER KEY">
+    <meta name="apple-mobile-web-app-title" content="MASTER KEY">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#FFD700">
+
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI0ZGRDcwMCIgY2xhc3M9IndpZHRoLTYgaGVpZHRoLTYiPgogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTIzIDIuMjVjMCAuNDE0LS4zMzYuNzUtLjc1Ljc1SDMuNzVjLS40MTQgMC0uNzUtLjMzNi0uNzUtLjc1VjEuNWMwLS40MTQuMzM2LS43NS43NS0uNzVoMTguNWMuNDE0IDAgLjc1LjMzNi43NS43NXYuNzVaTTE5LjUgNmEuNzUuNzUgMCAwIDAtLjc1Ljc1djExLjg5N0EzLjM3MiAzLjM3MiAwIDAgMCAxNi4xMjUgMjFhMy4zNzIgMy4zNzIgMCAwIDAtMi42MjUtMS4zNTNIMTAuMTI1Yy0uNDc3IDAtLjkzLS4xMTktMS4zMi0uMzMxQTQuNDgwIDQuNDgwIDAgMCAxIDUuMjUgMTQuODk2VjYuNzVhLjc1Ljc1IDAgMCAwLTEuNSAwVjE1LjEyYzAgMS43MjIgMS4xNzIgMy4yMSA1LjM3MyAzLjg3MWEzLjM3NSAzLjM3NSAwIDEgMCA0Ljc1NCAwYzQuMjAxLS42NjEgNS4zNzMtMi4xNDkgNS4zNzMtMy44NzFWNi43NUEuNzUuNzUgMCAwIDAgMTkuNSA2WiBtLTMuMzc1IDEyLjU2M2EyLjEyNSAyLjEyNSAwIDEgMCAwLTQuMjUgMi4xMjUgMi4xMjUgMCAwIDAgMC budgetaryIikgZmlsbD0iI0ZGRDcwMCIvPgo8L3N2Zz4K">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI0ZGRDcwMCIgY2xhc3M9IndpZHRoLTYgaGVpZHRoLTYiPgogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTIzIDIuMjVjMCAuNDE0LS4zMzYuNzUtLjc1Ljc1SDMuNzVjLS40MTQgMC0uNzUtLjMzNi0uNzUtLjc1VjEuNWMwLS40MTQuMzM2LS43NS43NS0uNzVoMTguNWMuNDE0IDAgLjc1LjMzNi43NS43NXYuNzVaTTE5LjUgNmEuNzUuNzUgMCAwIDAtLjc1Ljc1djExLjg5N0EzLjM3MiAzLjM3MiAwIDAgMCAxNi4xMjUgMjFhMy4zNzIgMy4zNzIgMCAwIDAtMi42MjUtMS4zNTNIMTAuMTI1Yy0uNDc3IDAtLjkzLS4xMTktMS4zMi0uMzMxQTQuNDgwIDQuNDgwIDAgMCAxIDUuMjUgMTQuODk2VjYuNzVhLjc1Ljc1IDAgMCAwLTEuNSAwVjE1LjEyYzAgMS43MjIgMS4xNzIgMy4yMSA1LjM3MyAzLjg3MWEzLjM3NSAzLjM3NSAwIDEgMCA0Ljc1NCAwYzQuMjAxLS42NjEgNS4zNzMtMi4xNDkgNS4zNzMtMy44NzFWNi43NUEuNzUuNzUgMCAwIDAgMTkuNSA2WiBtLTMuMzc1IDEyLjU2M2EyLjEyNSAyLjEyNSAwIDEgMCAwLTQuMjUgMi4xMjUgMi4xMjUgMCAwIDAgMC budgetaryIikgZmlsbD0iI0ZGRDcwMCIvPgo8L3N2Zz4K">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col p-4">
+
+    <div id="top-right-buttons"> 
+        <button id="sync-btn" title="تحديث ومسح الكاش" aria-label="تحديث ومسح الكاش" class="metal-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+        </button>
+        <button id="contact-us-btn" class="metal-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            </svg>
+            <span>اتصل بنا</span>
+        </button>
+    </div>
+    
+    <div id="security-overlay"></div>
+    <div id="security-modal">
+        <div id="shield-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20 mx-auto mb-4 text-gray-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 0 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+            </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-white mb-6">مفتاح تصريح الدخول</h2>
+        
+        <div id="pin-container" class="gap-2 sm:gap-3">
+            <input type="text" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input w-14">
+            <input type="text" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input w-14">
+            <input type="text" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input w-14">
+            <input type="text" pattern="[0-9]*" inputmode="numeric" maxlength="1" class="pin-input w-14">
+        </div>
+
+        <button id="login-btn">
+            <span>دخول</span>
+        </button>
+        <p id="pin-error">الرمز خاطئ. جارٍ إعادة التوجيه...</p>
+    </div>
+    <div id="contact-modal-overlay" class="modal-overlay"></div>
+    <div id="contact-modal" class="modal">
+        <button id="contact-modal-close-btn" class="modal-close-btn">&times;</button>
+        <h3 class="text-xl font-bold text-center text-gold mb-4 flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-3.86 8.25-8.625 8.25a9.06 9.06 0 0 1-2.093-.334c-.267-.052-.49-.188-.656-.39l-1.68-2.128a1.125 1.125 0 0 0-1.581-.229l-1.928 1.445A9 9 0 0 1 3 12c0-4.556 3.86-8.25 8.625-8.25S21 7.444 21 12Z" />
+            </svg>
+            <span>تواصل معنا</span>
+        </h3>
+        <p class="text-center text-gray-300 mb-6">نستقبل جميع آرائكم واقتراحاتكم</p>
+        
+        <div class="space-y-4">
+            <a href="https://wa.me/9647828937302" target="_blank" rel="noopener noreferrer" class="modal-icon-link">
+                <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.06 21.94L7.31 20.58C8.75 21.38 10.36 21.82 12.04 21.82C17.5 21.82 21.95 17.37 21.95 11.91C21.95 6.45 17.5 2 12.04 2ZM12.04 20.13C10.5 20.13 9.01 19.72 7.7 18.96L7.33 18.73L4.31 19.59L5.19 16.67L4.95 16.29C4.1 14.89 3.64 13.34 3.64 11.91C3.64 7.33 7.42 3.54 12.04 3.54C16.66 3.54 20.44 7.33 20.44 11.91C20.44 16.49 16.66 20.13 12.04 20.13ZM17.9 14.49C17.65 14.37 16.65 13.88 16.43 13.8C16.2 13.72 16.03 13.68 15.86 13.92C15.69 14.16 15.17 14.75 15 14.92C14.83 15.09 14.66 15.11 14.41 14.99C13.93 14.76 13.06 14.44 12.06 13.54C11.26 12.84 10.7 12.01 10.58 11.77C10.46 11.53 10.58 11.41 10.69 11.3C10.79 11.2 10.92 11.04 11.05 10.89C11.18 10.74 11.22 10.62 11.3 10.45C11.38 10.28 11.34 10.12 11.28 10C11.22 9.88 10.78 8.84 10.6 8.42C10.42 8 10.24 8.04 10.09 8.03C9.95 8.02 9.77 8.02 9.6 8.02C9.43 8.02 9.18 8.06 8.97 8.29C8.76 8.52 8.24 9.01 8.24 10.05C8.24 11.09 8.99 12.09 9.11 12.26C9.23 12.43 10.74 14.85 13.11 15.85C13.76 16.14 14.28 16.3 14.71 16.41C15.29 16.56 15.79 16.52 16.21 16.3C16.67 16.06 17.53 15.49 17.75 14.8C17.97 14.11 17.97 13.56 17.9 13.44C17.82 13.31 17.65 13.23 17.41 13.11L17.9 14.49Z"/>
+                </svg>
+                <span>مراسلة عبر واتساب</span>
+            </a>
+            <a href="https://iqsd2020-ctrl.github.io/Web/" target="_blank" rel="noopener noreferrer" class="modal-icon-link">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-1.04.15-2.04.42-3h15.16c.27.96.42 1.96.42 3s-.15 2.04-.42 3H4.42C4.15 14.04 4 13.04 4 12zm8 8c-1.93 0-3.68-.78-4.95-2.05L8.4 16.6c.7.3 1.45.5 2.25.6c.8.1 1.6.1 2.4-.1c.8-.2 1.55-.4 2.25-.7l1.35 1.35C15.68 19.22 13.93 20 12 20zm0-16c1.93 0 3.68.78 4.95 2.05L15.6 7.4c-.7-.3-1.45-.5-2.25-.6c-.8-.1-1.6-.1-2.4.1c-.8.2-1.55.4-2.25.7L7.05 4.05C8.32 2.78 10.07 2 12 2z"></path>
+                </svg>
+                <span>زيارة الموقع الرسمي</span>
+            </a>
+        </div>
+    </div>
+
+
+    <main class="flex-grow flex items-center justify-center relative pt-16 sm:pt-4">
+        <div class="w-full max-w-lg p-4 sm:p-6 md:p-8 card-container">
+        
+        <h1 class="text-3xl font-bold text-center mb-6 text-gold latin-font">
+            MASTER KEY
+        </h1>
+        <p class="text-center text-sm mb-8 text-gray-400">
+            ابحث عن معلومات الريموتات لسيارتك بدقة وفعالية.
+        </p>
+
+        <div class="flex border-b border-gray-700 mb-6">
+            <button id="specs-tab" class="tab-btn active">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h3.75" />
+                </svg>
+                <span>البحث بالمواصفات</span>
+            </button>
+            <button id="reverse-tab" class="tab-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                </svg>
+                <span>البحث العكسي</span>
+            </button>
+            <button id="vin-tab" class="tab-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.5A.75.75 0 0 1 4.5 3.75h15a.75.75 0 0 1 .75.75v15a.75.75 0 0 1-.75.75h-15a.75.75 0 0 1-.75-.75v-15ZM8.25 9v6m3-6v6m3-6v6m3-6v6M3 9h18" />
+                </svg>
+                <span>البحث بالـ VIN</span>
+            </button>
+        </div>
+
+        <form id="ai-form" class="mb-6">
+            
+            <div id="specs-search-panel" class="search-panel active space-y-5">
+                <div class="input-with-icon">
+                    <label for="year" class="block text-sm font-medium mb-1 text-gray-300">السنة</label>
+                    <input type="number" id="year" name="year" class="w-full app-input with-icon latin-font" placeholder="مثال: 2024">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="input-icon w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                    </svg>
+                </div>
+                
+                <div class="relative input-with-icon">
+                    <label for="type" class="block text-sm font-medium mb-1 text-gray-300">ماركة السيارة</label>
+                    <input type="text" id="type" name="type" class="w-full app-input with-icon" placeholder="مثال: تويوتا" autocomplete="off">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="input-icon w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5h16.5m-16.5 0T3.375 14.25m16.5 4.5c0 .621-.504 1.125-1.125 1.125h-1.5c-.621 0-1.125-.504-1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125H21v-1.5m-16.5 4.5c0 .621.504 1.125 1.125 1.125h1.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375v1.5M9 13.5l3 3m0 0l3-3m-3 3v-6m0 1.5H7.5m3-1.5h1.5m4.5 1.5H15" />
+                    </svg>
+                    <div id="type-suggestions" class="autocomplete-suggestions"></div>
+                </div>
+
+                <div class="relative input-with-icon">
+                    <label for="model" class="block text-sm font-medium mb-1 text-gray-300">الطراز</label>
+                    <input type="text" id="model" name="model" class="w-full app-input with-icon" placeholder="مثال: كامري" autocomplete="off">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="input-icon w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 8.25 9 15l-3-3m6 6 3.75-3.75M3 12h18M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z" />
+                    </svg>
+                    <div id="model-suggestions" class="autocomplete-suggestions"></div>
+                </div>
+
+                <div class="input-with-icon">
+                    <label for="market" class="block text-sm font-medium mb-1 text-gray-300">السوق</label>
+                    <select id="market" name="market" class="w-full app-input with-icon">
+                        <option value="" disabled selected>اختر السوق...</option>
+                        <option value="american">السوق الأمريكي</option>
+                        <option value="european">السوق الأوروبي</option>
+                        <option value="asian">السوق الآسيوي</option>
+                        <option value="korean">السوق الكوري</option>
+                        <option value="gulf">السوق الخليجي</option>
+                        <option value="chinese">السوق الصيني</option>
+                        <option value="global">السوق العالمي</option>
+                    </select>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="input-icon w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c.506 0 1.027-.02 1.544-.06M12 21c-.506 0-1.027-.02-1.544-.06M4.28 14.251c-.08.43-.12.87-.12 1.32 0 4.97 4.03 9 9 9s9-4.03 9-9c0-.45-.04-.89-.12-1.32M5.28 14.251A8.96 8.96 0 0 1 12 5.25c1.928 0 3.72.607 5.166 1.62M5.28 14.251A8.96 8.96 0 0 0 12 19.5c1.928 0 3.72-.607 5.166-1.62" />
+                    </svg>
+                </div>
+            </div>
+
+            <div id="reverse-search-panel" class="search-panel space-y-5">
+                <div class="input-with-icon">
+                    <label for="fcc_input" class="block text-sm font-medium mb-1 text-gray-300">FCC ID</label>
+                    <input type="text" id="fcc_input" name="fcc_input" class="w-full app-input with-icon latin-font" placeholder="مثال: HYQ14FBA" style="text-transform: uppercase;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="input-icon w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.136 11.962a8.25 8.25 0 0 1 13.728 0M2.002 8.886a11.25 11.25 0 0 1 19.996 0M12 5.25v.008" />
+                    </svg>
+                </div>
+                <div class="input-with-icon">
+                    <label for="pn_input" class="block text-sm font-medium mb-1 text-gray-300">Part Number (P/N)</label>
+                    <input type="text" id="pn_input" name="pn_input" class="w-full app-input with-icon latin-font" placeholder="مثال: 89904-0E120" style="text-transform: uppercase;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="input-icon w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h13.5m-13.5 7.5h13.5m-1.5-15l-3 3m0 0l-3-3m3 3V1.5m3 12l-3 3m0 0l-3-3m3 3v-1.5m0 9l3-3m0 0l3 3m-3-3v-1.5m-9 3l3 3m0 0l3-3m-3 3V18" />
+                    </svg>
+                </div>
+                <p class="text-xs text-gray-400 text-center">أدخل أحد الحقلين أو كلاهما لنتائج أدق.</p>
+            </div>
+
+            <div id="vin-search-panel" class="search-panel space-y-5">
+                <div class="input-with-icon">
+                    <div class="flex justify-between items-center mb-1">
+                        <label for="vin_input" class="block text-sm font-medium text-gray-300">رقم الشاصي (VIN)</label>
+                        <span id="vin-counter">(0/17)</span>
+                    </div>
+                    <input type="text" id="vin_input" name="vin_input" class="w-full app-input with-icon latin-font" placeholder="أدخل 17 رمزاً..." maxlength="17" style="text-transform: uppercase;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="input-icon w-5 h-5">
+                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.5A.75.75 0 0 1 4.5 3.75h15a.75.75 0 0 1 .75.75v15a.75.75 0 0 1-.75.75h-15a.75.75 0 0 1-.75-.75v-15ZM8.25 9v6m3-6v6m3-6v6m3-6v6M3 9h18" />
+                    </svg>
+                </div>
+                <p class="text-xs text-gray-400 text-center">سيقوم النظام بتحليل الـ VIN والبحث عن القطع المطابقة.</p>
+                <p class="text-xs text-yellow-400 text-center bg-gray-800 p-2 rounded-md border border-yellow-500">
+                    ملاحظة: هذه الوظيفة تجريبية ولا يمكن الاعتماد عليها مع السيارات الحديثة.
+                </p>
+            </div>
+            
+            
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <button type="submit" class="w-full sm:w-3/4 app-button">
+                    <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                    <span id="progress-text" class="w-auto text-center">ابحث عن الريموت</span> 
+                    <div id="loader" class="loader hidden"></div>
+                </button>
+                <button type="button" id="clear-form-btn" class="w-full sm:w-1/4 clear-button latin-font">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                    <span>مسح</span>
+                </button>
+            </div>
+        </form>
+        
+        <div id="result-container" class="mt-8">
+            <h2 class="text-xl font-semibold mb-4 text-gray-200 flex items-center gap-2" id="results-title" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <span>النتائج:</span>
+            </h2>
+            <div id="result-box" class="space-y-4">
+            </div>
+            <p id="message-box" class="mt-4 p-3 rounded-md text-center text-sm font-medium" style="display: none; background-color: var(--secondary-color); color: white;"></p>
+        </div>
+        
+        <div id="history-container" class="mt-8 w-full" style="display: none;">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold text-gray-200 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" />
+                    </svg>
+                    <span>سجل البحث</span>
+                </h2>
+                <button id="clear-history-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12.578 0c-.27.004-.537.01-.804.018c-3.3 0-6.095 2.24-6.095 5.438c0 3.199 2.79 5.438 6.095 5.438c.267 0 .534-.014.804-.018m-1.209 0v-3.614m1.209 3.614a48.108 48.108 0 0 1 3.478-.397m7.5 0a48.108 48.108 0 0 0-3.478-.397m0 0a48.108 48.108 0 0 1-3.478-.397m0 0c-1.013 0-2.015.09-3 .255" />
+                    </svg>
+                    <span>مسح السجل</span>
+                </button>
+            </div>
+            <div id="history-box" class="space-y-2 max-h-48 overflow-y-auto pr-2">
+            </div>
+        </div>
+
+    </div>
+    </main>
+
+    <footer class="w-full max-w-lg text-center py-4 mx-auto">
+        <a href="https://iqsd2020-ctrl.github.io/Web/" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="text-sm text-gold hover:text-yellow-300 hover:underline transition-colors duration-200">
+            جميع الحقوق محفوظة &copy; MASTER KEY
+        </a>
+    </footer>
+
+    <template id="empty-state-template">
+        <div class="empty-state-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+            <p>لم يتم العثور على نتائج مطابقة</p>
+            <p class="sub-text">يرجى التأكد من البيانات المدخلة أو تجربة بحث أوسع.</p> 
+        </div>
+    </template>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
